@@ -1,13 +1,12 @@
 @extends('_layouts.master')
 
-
 @section('content')
 <div class="bg-white py-8">
     <div class="container px-4 mx-auto my-16">
         <h2 class="text-2xl ">Get In Touch!</h2>
         <div class="contact-form">
         
-        <form class="mt-6 w-full lg:w-2/3" netlify>
+        <form class="mt-6 w-full lg:w-2/3" data-netlify="true"  @submit.prevent="submitForm()" novalidate>
             
             <div v-if="formSuccess == false">
             <div class="items-center py-4">

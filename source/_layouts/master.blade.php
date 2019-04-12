@@ -31,17 +31,17 @@
                 <div class="container mx-auto">
                     <div class="md:flex px-4 justify-between items-center py-8 lg:py-8">
                         <div class="items-center">
-                            {{-- <a href="{{ url('') }}"> --}}
+                            <a href="/">
                             <img src="/img/logo-white-on-black.svg" alt="Logo" style="max-width:320px;">
-                            {{-- </a> --}}
+                            </a>
                         </div>
                         
                         <div class="nav flex mt-8 md:mt-0">
-                            {{-- <a href="{{ url('') }}" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4 {{ activeRoute('home') }}">About</a> --}}
-                            {{-- <a href="{{ route('work') }}" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4 {{ activeRoute('work') }}">Work &amp; Clients</a> --}}
-                            {{-- <a href="{{ route('fullstackgoals') }}" class=" text-base bg-white px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4 {{ activeRoute('fullstackgoals') }}">Full stack goals <span class=" text-base bg-red text-xs text-white p-1 uppercase rounded">new</span></a> --}}
-                            {{-- <a href="{{ route('blog') }}" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4 {{ activeRoute(['blog','article']) }}">Blog</a> --}}
-                            {{-- <a href="{{ route('contact') }}" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4 {{ activeRoute('contact') }}">Get In Touch</a> --}}
+                            <a href="/" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">About</a>
+                            <a href="work" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Work &amp; Clients</a>
+                            {{-- <a href="fullstackgoals" class=" text-base bg-white px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Full stack goals <span class=" text-base bg-red text-xs text-white p-1 uppercase rounded">new</span></a> --}}
+                            <a href="blog" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Blog</a>
+                            <a href="contact" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Get In Touch</a>
                         </div>
                     </div>
     
@@ -66,21 +66,15 @@
                 </div>
                 
                 <footer class="bg-primary-dark py-16 mb-6 md:mb-0">
-                    <div class="container mx-auto flex px-4  flex-wrap ">
-                        <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                            <h3 class="text-white mb-8 text-base inline-block border-b-4 pb-2 border-grey-light">Links</h3>
-                            {{-- <p class="mb-3 text-sm"><a class="text-white no-underline" href="{{ url('terms-of-business') }}">Basic terms of business</a></p> --}}
-                            
+                    <div class="container mx-auto flex items-center px-4">
+                        <div class="mr-4">
+                        <a href="https://www.netlify.com" class="block">
+                            <img class="block" src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"/>
+                        </a>
                         </div>
-                        <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                            <h3 class="text-white mb-8 text-base inline-block border-b-4 pb-2 border-grey-light">Elsewhere on the web</h3>
-                            <p class="mb-3 text-sm"><a class="text-white no-underline" href="http://twitter.com/danmatthews">Twitter</a></p>
-                            <p class="mb-3 text-sm"><a class="text-white no-underline" href="http://instagram.com/danmatthews">Instagram</a></p>
-                            
-                        </div>
-                      
-                        <div class="w-full md:w-1/4 mt-6 md:mt-0">
-                            <p class="text-sm mb-2 text-white tracking-wide nunito mb-4">&copy; Dan Matthews {{ date('Y') }}</p>
+                        <div>
+                            <p class="text-white text-sm mb-1">Powered by <a class="text-white" href="#">Jigsaw</a>, deployed on <a class="text-white" href="https://www.netlify.com">Netlify</a>.</p>
+                            <p class="text-xs text-grey">Check them out, you won't be disappointed.</p>
                         </div>
                     </div>
                 </footer>
