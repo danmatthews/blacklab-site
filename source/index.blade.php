@@ -2,7 +2,7 @@
 
 @section('content')
     
-<div class="lg:py-16 py-8">
+<div class="lg:pb pb-8">
 	<div class="container px-4 mx-auto flex items-center flex-wrap">
 		<div class="w-full lg:w-1/2 mb-0 lg:mb-0 pr-0 lg:pr-16 lg:mt-0">
 			<img src="/img/me.jpg" alt="me!" class="rounded shadow-lg" />
@@ -10,7 +10,7 @@
 		<div class="w-full pl-0 md:w-3/4 lg:w-1/2">
             <h2 class="text-grey-light text-xl mb-4 leading-normal">I'm Dan...</h2>
             <p class="text-white mb-4 leading-normal">I've been working in the industry for more than a decade, including stints at agencies and small startups.</p>
-            <p class="text-white mb-4 leading-normal">I pride myself on being able to walk the line between design, marketing and development.</p>
+            <p class="text-white mb-4 leading-normal">I pride myself on being able to walk the line between design, idea development and coding.</p>
             <p class="text-white mb-4 leading-normal">Above all, I enjoy turning ideas into well-designed products and websites that are focused on being secure, fast, and easy to use.</p>
 		</div>
 		
@@ -39,7 +39,7 @@
 			<div class="flex py-4 items-center">
 				<h4 class="text-right pr-8 w-1/3 inline-block text-secondary-light mb-0 text-xl">Bespoke Business Software</h4>
 				<div class="w-2/3 border-l-4 border-secondary-light px-8 py-2">
-					<p class="text-grey-darkest leading-normal">Web-based software designed for your specific business purposes can streamline your workflow and save you money.</p>
+					<p class="text-grey-darkest leading-normal">Web-based software designed for your specific business purposes can help streamline your workflow and save you money.</p>
 				</div>
 			</div>
 			

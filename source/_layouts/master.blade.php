@@ -19,44 +19,39 @@
 <body class="g-radient">
     <header>
         <div id="app">
-            {{-- <div class="bg-primary-darker">
-                <a href="#" class="inline-block p-4 bg-primary-dark">
-                    <i class="fas fa-code text-white"></i>
-                </a>
-                <a href="#" class="inline-block p-4">
-                    <i class="fas fa-video text-white"></i>
-                </a>
-            </div> --}}
+            
             <header class="m-header">
-                <div class="container mx-auto">
-                    <div class="md:flex px-4 justify-between items-center py-8 lg:py-8">
-                        <div class="items-center">
-                            <a href="/">
-                            <img src="/img/logo-white-on-black.svg" alt="Logo" style="max-width:320px;">
-                            </a>
-                        </div>
+                <div class="">
+                    <div class="container mx-auto">
+                    
+                        <div class="md:flex px-4 justify-between items-center py-8 lg:py-8">
+                            <div class="items-center">
+                                <a href="/">
+                                    <img src="/img/logo-white-on-black.svg" alt="Logo" style="max-width:320px;">
+                                </a>
+                            </div>
                         
-                        <div class="nav flex mt-8 md:mt-0">
-                            <a href="/" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">About</a>
-                            <a href="work" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Work &amp; Clients</a>
-                            {{-- <a href="fullstackgoals" class=" text-base bg-white px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Full stack goals <span class=" text-base bg-red text-xs text-white p-1 uppercase rounded">new</span></a> --}}
-                            <a href="blog" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Blog</a>
-                            <a href="contact" class=" text-base px-4 py-2 no-underline  nunito rounded-full text-white ml-2 lg:ml-4">Get In Touch</a>
-                        </div>
-                    </div>
-    
-                    <div class="px-4">
-                        <div class="container mx-auto lg:flex items-center py-8 lg:py-16">
-                            <div class="w-full lg:w-full mb-4 lg:mb-0">
-                                <p class="animated text-center fadeIn nunito text-2xl md:text-4xl text-white leading-normal font-bold">Bespoke web development, websites, and trusted development subcontracting.</p>
+                            <div class="nav flex mt-8 md:mt-0">
+                                @include('_partials.menu')
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container mx-auto">
+
+                <div class="px-4">
+                    <div class="container mx-auto lg:flex items-center py-8 lg:py-16">
+                        <div class="w-full lg:w-full mb-4 lg:mb-0">
+                                @if (isset($slogan))
+                                <p class="animated text-center fadeIn nunito text-2xl md:text-4xl text-white leading-normal font-bold">{{ $slogan }}</p>
+                                @else
+                                <p class="animated text-center fadeIn nunito text-2xl md:text-4xl text-white leading-normal font-bold">Bespoke web development, websites, and trusted development subcontracting.</p>
+                                @endif
+                        </div>
+                    </div>
+                </div>
                     
-                    {{-- <div class="hero w-3/4 py-16"> --}}
-                        {{-- <p class="text-xl lg:text-5xl mb-3 text-grey-darker font-bold">Let's build cool stuff together.</p> --}}
-                        {{-- <p class="nunito text-5xl text-grey-dark leading-normal">Bespoke business software, web apps, websites and trusted development subcontracting.</p> --}}
-                        {{-- </div> --}}
+                   
                         
                     </header>
                     <main>
@@ -65,7 +60,7 @@
                     
                 </div>
                 
-                <footer class="bg-primary-dark py-16 mb-6 md:mb-0">
+                <footer class="py-16 mb-6 md:mb-0 bg-primary-dark">
                     <div class="container mx-auto flex items-center px-4">
                         <div class="mr-4">
                         <a href="https://www.netlify.com" class="block">

@@ -1,42 +1,33 @@
-@extends('_layouts.master')
+@extends('_layouts.master', [
+    'slogan' => "Blog"
+])
 
 @section('content')
-<div class="bg-white py-8">
-    <div class="container px-4 mx-auto my-16">
-        <h2 class="text-2xl ">Get In Touch!</h2>
-        <div class="contact-form">
+    <div class="container px-4 mx-auto">
         
-        <form class="mt-6 w-full lg:w-2/3" data-netlify="true"  @submit.prevent="submitForm()" novalidate>
+        @foreach ($posts as $post)
+        
+        <div class="flex mb-4">
+            <div class="w-1/4 pr-8 pt-8">
+                <p class="text-grey-lighter text-right text-sm font-medium mb-2">{{ $post->getDate()->format('F j, Y') }}</p>
+            </div>
+            <div class="w-3/4 bg-white p-8 rounded shadow-lg">
+                
             
-            <div v-if="formSuccess == false">
-            <div class="items-center py-4">
-                <label for="name" class="text-grey-darkest font-bold mb-4 block">Your name <span class="text-sm text-grey-dark italic font-normal">required</span></label>
-                <input name="name" v-validate="'required|min:3'" type="text" class="border-2 block mt-2 p-3 rounded w-full"  required>
-            </div>
-    
-            <div class="items-center py-4">
-                <label for="email" class="text-grey-darkest font-bold mb-4 block">Your email <span class="text-sm text-grey-dark italic font-normal">required</span></label>
-                <input type="email" name="email" v-validate="'required|email'" class="border-2 block mt-2 p-3 rounded w-full error"  required>
-            </div>
-    
-            <div class="items-center py-4">
-                <label for="message" class="text-grey-darkest font-bold mb-4 block">Your message <span class="text-sm text-grey-dark italic font-normal">required</span></label>        
-                <textarea name="message" v-validate="'required|min:3'" class="border-2 h-32 block mt-2 p-3 rounded w-full"  name="message" required ></textarea>
-            </div>
-    
-              
-    
-            <div class="py-2">
-                <button type="submit" class="bg-secondary-light font-bold text-white rounded-full py-3 px-6">Send</button>
-            </div>
-    
-            </div>
-    
+                <h2 class="text-xl mb-4">
+                    <a
+                        href="{{ $post->getUrl() }}"
+                        title="Read more - {{ $post->title }}"
+                        class="text-primary no-underline"
+                    >{{ $post->title }}</a>
+                </h2>
             
-    
-        </form>
-        </div>
-    
-    </div>
+                <p class="mt-0 leading-normal text-grey-darker">{!! $post->excerpt() !!}</p>
+            
+            </div>
+            </div>
+
+        @endforeach
+        
     </div>
 @endsection
