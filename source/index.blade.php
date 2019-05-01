@@ -17,7 +17,7 @@
 
 				<div class="w-1/3 pr-8">
 					<video class="portfolio-video mb-4 shadow-lg" style="max-width: 100%; height: auto;" autoplay loop muted>
-						<source type="video/mp4" src="assets/site-2.mp4"/>
+						<source type="video/mp4" src="assets/lf/site-2.mp4"/>
 					</video>
 					<h3 class="mb-2 text-white font-normal text-sm">New Website!</h3>
 					<p class="leading-normal text-grey-light text-sm">Static, fast &amp; powered by Netlify.</p>
