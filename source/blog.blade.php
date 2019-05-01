@@ -3,9 +3,16 @@
 ])
 
 @section('content')
-    <div class="container px-4 mx-auto">
+<!-- Start Slogan -->
+<div class="container mx-auto lg:flex items-center py-8 lg:py-16 px-4">
+    <div class="w-full lg:w-full mb-4 lg:mb-0">
+        <p class="animated text-center fadeIn nunito text-2xl md:text-4xl text-white leading-normal font-bold">Blog</p>
+    </div>
+</div>
+<!-- End Slogan -->
+    <div class="container px-4 mx-auto pb-16">
         
-        @foreach ($posts as $post)
+        @forelse ($posts as $post)
         
         <div class="flex mb-4">
             <div class="w-1/4 pr-8 pt-8">
@@ -27,7 +34,14 @@
             </div>
             </div>
 
-        @endforeach
+
+        @empty
+
+        <div class="w-3/4 bg-white rounded shadow-lg text-center p-16">
+            <p class="text-primary-light">Nothing Here Yet.</p>
+        </div>
+
+        @endforelse
         
     </div>
 @endsection

@@ -4,6 +4,13 @@
 
 
 @section('content')
+<!-- Start Slogan -->
+<div class="container mx-auto lg:flex items-center py-8 lg:py-16 px-4">
+        <div class="w-full lg:w-full mb-4 lg:mb-0">
+            <p class="animated text-center fadeIn nunito text-2xl md:text-4xl text-white leading-normal font-bold">Get In Touch</p>
+        </div>
+    </div>
+    <!-- End Slogan -->
     <div class="container px-4 mx-auto flex pb-16">
         <div class="w-2/3 contact-form bg-white rounded shadow-lg p-8">
         

@@ -1,5 +1,5 @@
 import 'sharer.js';
-import './highlight';
+// import './highlight';
 
 const clickMe = document.querySelector('.test-js');
 

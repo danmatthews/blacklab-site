@@ -5,7 +5,6 @@ comments: false
 cover_image: /assets/img/permissions.jpg
 date: 2019-04-13T14:01:28.363Z
 extends: _layouts.post
-section: content
 title: Using migrations for much more in Laravel.
 tags:
   - laravel
@@ -135,8 +134,7 @@ So in this situation, say we want to add a new role called "student", we would g
 
 And in our `up()` method we can add the new role and new permissions, or even alter old ones:
 
-```
-
+```php
 use App\User;
 use Spatie\Permission\Models\Role;
 
@@ -156,11 +154,9 @@ public function up()
 
 This will __clear the cache for you__ since you're making changes using the model/trait methods, you can also see *exact changes* you made to the roles and permissions, and if you write a down method, you can reverse them:
 
-```
-
+```php
 public function down()
 {
-
   // New student Role and permissions.
   $role = Role::findByName('student');
   $role->revokePermission('quiz.view');
